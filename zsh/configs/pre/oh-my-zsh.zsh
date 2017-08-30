@@ -4,8 +4,11 @@ export ZSH=~/.oh-my-zsh
 # Theme
 ZSH_THEME="robbyrussell"
 
+#Load ssh identities with ssh-agent plugins
+zstyle ':omz:plugins:ssh-agent' identities 'id_rsa_winddle' 'id_rsa_aubinlrx'
+
 # Plugins used
-plugins=(git, nvm, rvm, ssh-agent)
+plugins=(git nvm rvm ssh-agent)
 
 # User configuration
 
