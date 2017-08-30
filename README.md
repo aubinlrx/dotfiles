@@ -31,6 +31,20 @@ Run rcm (this command expects that you cloned your dotfiles to ~/dotfiles/)
 $ env RCRC=$HOME/dotfiles/rcrc rcup
 ```
 
+Install the spaceship theme for zsh
+
+```
+curl -o -
+https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/install.zsh
+| zsh
+```
+
+Install FiraCode fonts
+
+```
+sudo apt install fonts-firacode
+```
+
 ## Install Vim Plugins
 
 Plugins are listed in `vimrc.bundles`

@@ -2,7 +2,8 @@
 export ZSH=~/.oh-my-zsh
 
 # Theme
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
+SPACESHIP_VI_MODE_SHOW=false
 
 #Load ssh identities with ssh-agent plugins
 zstyle ':omz:plugins:ssh-agent' identities 'id_rsa_winddle' 'id_rsa_aubinlrx'
