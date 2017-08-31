@@ -48,4 +48,4 @@ _load_settings "$HOME/.zsh/configs"
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 
-source "/home/aubinlrx/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+
