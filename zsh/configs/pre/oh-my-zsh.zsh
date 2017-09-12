@@ -2,14 +2,18 @@
 export ZSH=~/.oh-my-zsh
 
 # Theme
-ZSH_THEME="spaceship" #robbyrussell
+if [[ $(zsh --version | awk '{print $2}') > 5.1.0 ]]; then
+  ZSH_THEME="spaceship"
+else
+  ZSH_THEME="robbyrussell" #robbyrussell
+fi
 SPACESHIP_VI_MODE_SHOW=false
 
 # Load ssh identities with ssh-agent plugins
 zstyle ':omz:plugins:ssh-agent' identities 'id_rsa_winddle' 'id_rsa_aubinlrx'
 
 # Plugins used
-plugins=(git nvm ssh-agent)
+plugins=(git nvm ssh-agent syntax-highlighting history-substring-search)
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 

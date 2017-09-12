@@ -15,6 +15,7 @@ set autowrite        " Automatically :write before running commands
 " Line number
 set number
 set numberwidth=5
+set cursorline
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -27,7 +28,9 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 " Theme
-set background=dark
+set t_Co=256
+let g:solarized_termcolors=256
+set background=light
 colorscheme solarized
 
 filetype plugin indent on
