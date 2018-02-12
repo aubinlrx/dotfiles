@@ -67,6 +67,13 @@ set numberwidth=5
 set cursorline
 set lazyredraw
 
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+" Syntax specific
+" set ruby_space_errors = 1
+
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
@@ -261,10 +268,6 @@ if executable('ag')
     nnoremap \ :Ag<SPACE>
   endif
 endif
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li|p'

@@ -12,11 +12,13 @@ SPACESHIP_VI_MODE_SHOW=false
 # Load ssh identities with ssh-agent plugins
 zstyle ':omz:plugins:ssh-agent' identities 'id_rsa_winddle' 'id_rsa_aubinlrx'
 
+# Dir colors
+eval `dircolors ~/.dir_colors/dircolors`
+
 # Plugins used
 plugins=(git nvm rvm ssh-agent syntax-highlighting history-substring-search)
 
 # User configuration
-
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.rvm/bin"
 
 source $ZSH/oh-my-zsh.sh
