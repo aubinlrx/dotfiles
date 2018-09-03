@@ -4,6 +4,7 @@ alias ln="ln -v"
 alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias pcat="pygmentize -f terminal256 -O style=native -g"
 
 # Bundler
 alias b="bundle"
