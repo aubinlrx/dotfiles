@@ -12,6 +12,8 @@ alias b="bundle"
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
+alias current_spec="rspec $(git diff --name-only dev -- ./**/*_spec.rb)"
+alias db="./bin/db"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
