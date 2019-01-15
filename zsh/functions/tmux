@@ -1,0 +1,10 @@
+session="winddle"
+
+function winddle_start() {
+  tmux new-session -s $session -n servers -d 'cd ~/Code/work/winddle; rails s'
+  tmux new $session
+  tmux split-window -h 'cd ~/Code/work/winddle; ./bin/webpack-dev-server'
+  tmux split-window -v 'cd ~/Code/work/winddle-peeps; NODE_ENV=dev npm run dev'
+  tmux new-window -n vim
+  tmux attach-session -d
+}
