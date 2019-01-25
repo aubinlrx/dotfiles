@@ -146,11 +146,19 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Assign window behavior
 # ===============================
 
+assign [class="Slack|Google Hangouts"] $ws3
+
 # Assign floating windows.
 for_window [class="feh|mpv"] floating enable
+for_window [class="Peek"] floating enable
 
 # Remove the titlebar.
 for_window [class="mpv"] border pixel 1
+
+# spotify: no border
+for_window [class="^Spotify$"] border none
+for_window [class="^Spotify Premium$"] border none
+for_window [class="Spotify"] move window to workspace $ws4
 
 # audio controls
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ #increase sound volume
@@ -161,6 +169,9 @@ bindsym XF86AudioMicMute exec amixer set Capture toggle # mute mic
 # screen brightness controls
 bindsym XF86MonBrightnessUp exec sudo light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec sudo light -U 5 # decrease screen brightness
+
+bindsym $mod+Ctrl+1 [workspace=$ws1] kill
+bindsym $mod+Ctrl+2 [workspace=$ws2] kill
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -173,9 +184,9 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Taking screenshots
 # ====================
 # Fullscreen
-bindsym Print exec "scrot -q 100 '~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png'
+bindsym Print exec "scrot -q 100 ${HOME}'/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png' -e 'xclip $f -selection clipboard -t image/png -i $f'"
 # Screenshot with selection
-bindsym Shift+Print exec "sleep 0.4; scrot -q 100 -s '~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png'"
+bindsym Shift+Print exec "sleep 0.4; scrot -q 100 -s ${HOME}'/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S_$wx$h.png' -e 'xclip $f -selection clipboard -t image/png -i $f'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
