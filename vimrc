@@ -64,6 +64,7 @@ set autowrite        " Automatically :write before running commands
 " Line number
 set number
 set numberwidth=5
+set relativenumber
 set cursorline
 set lazyredraw
 
