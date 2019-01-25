@@ -6,6 +6,11 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias pcat="pygmentize -f terminal256 -O style=native -g"
 
+# Change directories
+alias cdc="cd $HOME/Code/work && cd"
+alias cdw="cd $HOME/Code/work/winddle"
+alias cdp="cd $HOME/Code/work/winddle-peeps"
+
 # Bundler
 alias b="bundle"
 
