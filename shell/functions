@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# Always list directory contents upon 'cd'
+function cd() {
+    builtin cd "$@": ll;
+}
+
+# Makes new Dir and jumps inside
+function cdmk() {
+    mkdir -p "$@" && cd "$@";
+}
+
+# Fuzzy find file
+function ff() {
+    find . -type -iname "*$1";
+}
+
+# Fuzzy find directory
+function fd() {
+    find . -type d -iname "*$1";
+}
+
+# search and replace with ag
+function agr {
+    ag -0 -l "$1" | xargs -0 perl -pi.bak -e "s/$1/$2/g";
+}
+
+# syntax highligh in cat
+function cat() {
+    local out colored
+    out=$(/bin/cat $@)
+    colored=$(echo $out | pygmentize -f console -g 2>/dev/null)
+    [[ -n $colored ]] && echo "$colored" || echo "$out"
+}

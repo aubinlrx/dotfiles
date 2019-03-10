@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias dl="~/Downloads"
+alias dt="~/Desktop"
+
+# Default options
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+alias rr="rm -rfiv"
+alias mkdir ="mkdir -pv"
+
+# Reload the shell
+alias reload="exec $SHELL -l"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+# Git
+alias git=hub
+
+# Docker
+alias d="docker"
+alias dc="docker compose"
+alias dex="docker exec -it"
