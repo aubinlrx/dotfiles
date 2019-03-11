@@ -35,10 +35,10 @@ nmap k gk
 nmap <C-e> :e#<CR>
 
 " Super fast window movement shortcuts
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-h> <C-W>h
-nmap <C-l> <C-W>l
+nmap <C-j> <C-W><C-J>
+nmap <C-k> <C-W><C-K>
+nmap <C-h> <C-W><C-H>
+nmap <C-l> <C-W><C-L>
 
 " Search for the word under the cursor in the current directory
 nmap <M-k> mo:Ack! "\b<cword>\b" <CR>
@@ -160,6 +160,9 @@ let g:gitgutter_sign_modified_removed = '.'
 " SuperTab
 let g:SuperTabLongestEnhanced=1
 let g:SuperTabLongestHighlight=1
+
+" NerdTree
+nmap <C-n> :NERDTreeToggle<CR>
 
 " -----------------------------------------------------------------------------
 " COLORS

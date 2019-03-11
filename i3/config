@@ -31,16 +31,22 @@ font pango:monospace $fontsize
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Handle screen order
-exec --no-startup-id xrandr --output HDMI-2 --left-of HDMI-1 --auto
+exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
 
 # load compton fix firefox screen tearing: https://askubuntu.com/questions/751149/screen-tearing-when-using-i3-none-when-using-unity
 exec --no-startup-id compton --config ~/.config/compton.conf -b
+
+# Launch play-with-mpv server for chrome
+exec --no-startup-id ~/.local/bin/play-with-mpv
+
+# Launch Pulse audio because of firefox
+exec --no-startup-id start-pulseaudio-x1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -146,7 +152,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Assign window behavior
 # ===============================
 
-assign [class="Slack|Google Hangouts"] $ws3
+assign [class="Slack|Google Hangouts|Signal"] $ws3
 
 # Assign floating windows.
 for_window [class="feh|mpv"] floating enable
