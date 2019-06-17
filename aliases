@@ -5,6 +5,7 @@ alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias pcat="pygmentize -f terminal256 -O style=native -g"
+alias  cat="bat"
 
 # Change directories
 alias cdc="cd $HOME/Code/work && cd"
@@ -19,6 +20,9 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias s="rspec"
 alias current_spec="rspec $(git diff --name-only dev -- ./**/*_spec.rb)"
 alias db="./bin/db"
+alias ws="./bin/webpack-dev-server"
+alias cspec="RSPEC_RETRY_RETRY_COUNT=1 DRIVER=chrome rspec"
+alias fspec="RSPEC_RETRY_RETRY_COUNT=1 DRIVER=firefox rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'

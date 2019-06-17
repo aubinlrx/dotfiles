@@ -42,6 +42,9 @@ exec --no-startup-id ~/.local/bin/play-with-mpv
 # Launch Pulse audio because of firefox
 exec --no-startup-id start-pulseaudio-x1
 
+# Launch Dropdox at startup
+exec --no-startup-id dropbox start
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -123,6 +126,18 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# Define workspace monitor
+workspace $ws1 output HDMI-1
+workspace $ws2 output HDMI-1
+workspace $ws3 output HDMI-1
+workspace $ws4 output HDMI-1
+workspace $ws5 output HDMI-1
+workspace $ws6 output HDMI-2
+workspace $ws7 output HDMI-2
+workspace $ws8 output HDMI-2
+workspace $ws9 output HDMI-2
+workspace $ws10 output HDMI-2
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

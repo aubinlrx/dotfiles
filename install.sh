@@ -30,6 +30,13 @@ source $HOME/.rvm/scripts/rvm
 # NVM
 curl https://raw.githubusercontent.com/creationix/nvm/v0.33.4/install.sh | bash
 
+# Rust
+sudo curl https://sh.rustup.rs -sSf | sh
+
+# Alacritty
+./install/alacritty.sh
+
+
 # Prepare /Code directory
 mkdir $HOME/Code
 mkdir $HOME/Code/personnal

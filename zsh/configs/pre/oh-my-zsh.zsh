@@ -16,7 +16,7 @@ zstyle ':omz:plugins:ssh-agent' identities 'id_rsa_winddle' 'id_rsa_aubinlrx'
 eval `dircolors ~/.dir_colors/dircolors`
 
 # Plugins used
-plugins=(git nvm rvm ssh-agent syntax-highlighting history-substring-search)
+plugins=(git nvm rvm ssh-agent history-substring-search)
 
 # User configuration
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.rvm/bin"
